@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "incremental": true,
+    "outDir": "dist",
+    "paths": {
+      "~/*": ["./src/*"],
+      "@/*": ["./test/*"]
+    }
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalResolver": true,
+    "experimentalSpecifierResolution": "node",
+    "preferTsExts": true,
+    "transpileOnly": false
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
